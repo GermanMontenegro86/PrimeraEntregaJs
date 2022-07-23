@@ -37,7 +37,7 @@
 
             let menu;
 
-            let asado = 1500, milanesa = 1100, bife = 1300, polloHorno = 1000, pechugaMostaza = 1100,
+            let asado = 1700, milanesa = 1100, bife = 1300, polloHorno = 1000, pechugaMostaza = 1100,
 
                 polloDisco = 1100, zorrentinosSalsaBlanca = 1500, ñoquisBoloñesa = 1300, raviolesParisienne = 1600,
 
@@ -51,154 +51,152 @@
 
             bienvenida = cliente + "!!! bienvenido a nuestro restaurante Listo el pollo";
 
-            alert(bienvenida);
+            console.log(bienvenida);
 
-            opciones = parseInt(prompt("Ahora podras ver nuestro menu\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
+            opciones = parseInt(prompt("Nuestro menu\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
 
-            while (opciones != "5") {
-                switch (opciones) {
+            while (opciones != "5")
+             {
+                switch (opciones) 
+                {
                     case 1:
-                        alert("1. Asado al horno con papas fritas $1500\n2. Milanesa con pure $1100\n3. Bife de chorizo con papas fritas $1300");
-
+                        console.log("1. Asado al horno con papas fritas $" + asado + " \n 2. Milanesa con pure $" + milanesa + " \n 3. Bife de chorizo con papas fritas $" + bife);
                         break;
 
                     case 2:
-                        alert("1. pollo al horno con papas fritas $1000\n2. Pechuga a la mostaza $1100\n3. Pollo al disco $1100");
+                        console.log("1. pollo al horno con papas fritas $" + polloHorno + "\n2. Pechuga a la mostaza $" + pechugaMostaza + "\n3. Pollo al disco $" + polloDisco);
 
                         break;
 
                     case 3:
-                        alert("1. Zorrentinos con salsa blanca $1500\n2. Ñoquis con boloñesa $ 1300\n3. Ravioles con salsa parisienne $1600");
+                        console.log("1. Zorrentinos con salsa blanca $" + zorrentinosSalsaBlanca + "\n2. Ñoquis con boloñesa $" + ñoquisBoloñesa + "\n3. Ravioles con salsa parisienne $" + raviolesParisienne);
                         break;
 
                     case 4:
-                        alert("1. Milenesa de surubi con pure de papas $1500\n2. Filet de merluza con pure de papas $1200\n3. Pejerrey al roquefort $1700");
+                        console.log("1. Milenesa de surubi con pure de papas $" + milanesaSurubi + "\n2. Filet de merluza con pure de papas $" + filetMerluza + "\n3. Pejerrey al roquefort $" + pejerreyRoquefort);
                         break;
-
-                    case 5:
-                        alert("Salir");
-
-                    default:
-                        alert("Ingrese por favor un numero de la lista");
-                }
-                opciones = parseInt(prompt("1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
-            }
-
-            opciones = parseInt(prompt("Ahora vamos a poder comprar!!!!\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
-
-            while (opciones != "5") {
-                switch (opciones) {
-                    case 1:
-                        menu = parseInt(prompt("1. Asado al horno con papas fritas $1500\n2. Milanesa con pure $1100\n3. Bife de chorizo con papas fritas $1300"));
-
-                        if (menu == "1") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * asado;
-                            alert(total);
-                        }
-
-                        else if (menu == "2") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * milanesa;
-                            alert(total);
-                        }
-
-                        else if (menu == "3") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * bife;
-                            alert(total);
-                        }
-
-                        else {
-                            opciones = parseInt(prompt("Ahora podras ver nuestro menu\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
-                        }
-
-                        break;
-
-                    case 2:
-                        menu = parseInt(prompt("1. pollo al horno con papas fritas $1000\n2. Pechuga a la mostaza $1100\n3. Pollo al disco $1100"));
-
-                        if (menu == "1") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * polloHorno;
-                            alert(total);
-                        }
-
-                        else if (menu == "2") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * pechugaMostaza;
-                            alert(total);
-                        }
-
-                        else if (menu == "3") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * polloDisco;
-                            alert(total);
-                        }
-
-                        else {
-                            opciones = parseInt(prompt("Ahora podras ver nuestro menu\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
-                        }
-
-                        break;
-
-                    case 3:
-                        menu = parseInt(prompt("1. Zorrentinos con salsa blanca $1500\n2. Ñoquis con boloñesa $ 1300\n3. Ravioles con salsa parisienne $1600"));
-                        if (menu == "1") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * zorrentinosSalsaBlanca;
-                            alert(total);
-                        }
-
-                        else if (menu == "2") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * ñoquisBoloñesa;
-                            alert(total);
-                        }
-
-                        else if (menu == "3") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * raviolesParisienne;
-                            alert(total);
-                        }
-
-                        else {
-                            opciones = parseInt(prompt("Ahora podras ver nuestro menu\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
-                        }
-                        break;
-
-                    case 4:
-                        menu = parseInt(prompt("1. Milenesa de surubi con pure de papas $1500\n2. Filet de merluza con pure de papas $1200\n3. Pejerrey al roquefort $1700"));
-                        if (menu == "1") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * milanesaSurubi;
-                            alert(total);
-                        }
-
-                        else if (menu == "2") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * filetMerluza;
-                            alert(total);
-                        }
-
-                        else if (menu == "3") {
-                            cantidad = parseInt(prompt("ingrese numero de pociones"));
-                            total = "El precio total es $ " + cantidad * pejerreyRoquefort;
-                            alert(total);
-                        }
-
-                        else {
-                            opciones = parseInt(prompt("Ahora podras ver nuestro menu\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
-                        } break;
 
                     case 5:
                         console.log("Salir");
 
                     default:
-                        alert("Ingrese por favor un numero de la lista");
+                        console.log("Ingrese por favor un numero de la lista");
                 }
-                opciones = parseInt(prompt("Ahora podras comprar menu\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
+                opciones = parseInt(prompt("1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Precio Final\n6. Salir"));
             }
+
+            opciones = parseInt(prompt("Ahora vamos a poder comprar!!!!\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir "));
+
+            while (opciones != "5") 
+            {
+                switch (opciones)
+                 {
+                    case 1:
+                        menu = parseInt(prompt("1. Asado al horno con papas fritas $" + asado + "\n2. Milanesa con pure $" + milanesa + "\n3. Bife de chorizo con papas fritas $" + bife));
+
+                        switch (menu) {
+                            case 1:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * asado;
+                                break;
+
+                            case 2:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * milanesa;
+
+                                break;
+
+                            case 3:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * bife;
+
+                                break;
+
+                            default:
+                                consol.log("por favor ingresar los numeros asignado");
+
+                                break;
+                        }
+
+                        break;
+
+                    case 2:
+                        menu = parseInt(prompt("1. pollo al horno con papas fritas $" + polloHorno + "\n2. Pechuga a la mostaza $" + pechugaMostaza + "\n3. Pollo al disco $" + polloDisco));
+
+                        switch (menu) {
+                            case 1:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * polloHorno;
+
+                                break;
+
+                            case 2:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * pechugaMostaza;
+
+                                break;
+
+                            case 3:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * polloDisco;
+
+                                break;
+                        }
+
+                        break;
+
+                    case 3:
+                        menu = parseInt(prompt("1. Zorrentinos con salsa blanca $" + zorrentinosSalsaBlanca + "\n2. Ñoquis con boloñesa $" + ñoquisBoloñesa + "\n3. Ravioles con salsa parisienne $" + raviolesParisienne));
+                        switch (menu) {
+                            case 1:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * zorrentinosSalsaBlanca;
+
+                                break;
+
+                            case 2:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * ñoquisBoloñesa;
+
+                                break;
+
+                            case 3:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * raviolesParisienne;
+
+                                break;
+                        }
+
+                        break;
+
+                    case 4:
+                        menu = parseInt(prompt("1. Milanesa de surubi $" + milanesaSurubi + "\n2. Filet de merluza con pure de papas $" + filetMerluza + "\n3. Pejerrey con salsa de roquefort $" + pejerreyRoquefort));
+
+                        switch (menu) {
+                            case 1:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * milanesaSurubi;
+
+                                break;
+
+                            case 2:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * filetMerluza;
+
+                                break;
+
+                            case 3:
+                                cantidad = parseInt(prompt("ingrese numero de pociones"));
+                                total = "El precio total es $ " + cantidad * pejerreyRoquefort;
+
+                                break;
+                        }
+
+                }
+                alert(total);
+                opciones = parseInt(prompt("Ahora vamos a poder comprar!!!!\n1-Carnes\n2-Pollo\n3-Pasta\n4-pescado\n5. Salir"));
+            }
+
         }
 
     </script>
